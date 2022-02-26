@@ -198,6 +198,11 @@ async function view_story(){
 		 	x_val,
 		 	cyv(cyv(cyv(cyv(cyv(cyv(y_val, 3, -1), 4, -2), 5, -3), 6, -3), 7, -1), 11, -1),
 			"replace"
+		],
+		["2 E. Coli with poison level 4 die.<br>4 E. Coli with poison level 5 die.<br>An E. Coli with poison level 6 dies.<br>4 E. Coli with poison level 7 die.<br>2 E. Coli with poison level 8 die.",
+			x_val,
+			cyv(cyv(cyv(cyv(cyv(y_val, 8, -1), 7, -4), 6, -1), 5, -4), 4, -2),
+			"replace"
 		]
 	]
 	for (let i = 0; i < seq.length; i++){
