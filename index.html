@@ -1,6 +1,33 @@
-<!Doctype HTML>
+<!DOCTYPE html>
 <html>
-	<body>
-		<img src="chart.png"><img src="endchart.png">
-	</body>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Matthew Hou's 🧬 Science Project about E Coli Development</title>
+		<link rel="stylesheet" href="style.css">
+		<link rel="icon" href="assets/covid.png">
+		<script src='https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js'></script>
+    </head>
+    <body>
+		<header>
+			<h1 class="bold">🧬 E Coli Development 🧬</h1>
+			<h2 class="bold">By Matthew Hou</h2>
+		</header>
+		<div id="charts">
+			<canvas id="start" height="400"></canvas>
+			<canvas id="end" height="400"></canvas>
+		</div>
+		<div id="storyline">
+			<div id="chatbox">
+				<div id="chatbox__content">
+				</div>
+				<button id="next_event">Next Event Please!</button>
+			</div>
+			<canvas id="story_graph" height="400"></canvas>	
+		</div>
+		<footer></footer>
+		<script src="graphs.js" defer></script>
+		<script src="dynamic.js" defer></script>
+		
+    </body>
 </html>
