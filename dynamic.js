@@ -169,9 +169,9 @@ async function view_story(){
 			cyv(cyv(cyv(cyv(cyv(cyv(y_val, 7, -1), 6, -8), 5, -5), 4, -6), 3, -2), 2, -3),
 			"replace"
 		],
-		["1 E. Coli with poison level 2 dies.<br>2 E. Coli with poison level 3 die.<br>2 E. Coli with poison level 4 die.<br>1 E. Coli with poison level 5 die.<br>2 E. Coli with poison level 6 die.",
+		["1 E. Coli with poison level 2 dies.<br>2 E. Coli with poison level 3 die.<br>1 E. Coli with poison level 4 dies.<br>1 E. Coli with poison level 5 die.<br>2 E. Coli with poison level 6 die.",
 			x_val,
-			cyv(cyv(cyv(cyv(cyv(y_val, 6, -2), 5, -1), 4, -2), 3, -2), 2, -1),
+			cyv(cyv(cyv(cyv(cyv(y_val, 6, -2), 5, -1), 4, -1), 3, -2), 2, -1),
 			"replace"
 		],
 		["The E. Coli reproduce.",
@@ -189,9 +189,14 @@ async function view_story(){
 			cyv(cyv(cyv(cyv(cyv(y_val, 8, -1), 7, -2), 6, -3), 5, 1), 4, -1),
 			"replace"
 		],
-		["The E. Coli reproduce, but there is a mutation and a child of a E. Coli with poison level 4 has poison level 3.",
+		["The E. Coli reproduce.<br>Except, there is a mutation and a child of a E. Coli with poison level 4 has poison level 3.",
 			x_val,
 			cyv(cyv(reproduce(y_val), 3, 1), 4, -1),
+			"replace"
+		],
+		["An E. Coli with poison level 3 dies.<br>2 E. Coli with poison level 4 die.<br>3 E. Coli with poison level 5 die.<br>3 E. Coli with poison level 6 die.<br>An E. Coli with poison level 7 dies.<br>An E. Coli with poison level 11 dies.", 
+		 	x_val,
+		 	cyv(cyv(cyv(cyv(cyv(cyv(y_val, 3, -1), 4, -2), 5, -3), 6, -3), 7, -1), 11, -1),
 			"replace"
 		]
 	]
