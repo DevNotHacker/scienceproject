@@ -147,7 +147,7 @@ async function view_story(){
 		["Human has noticed the increasing amount of E-Coli and is now taking antibiotics.", x_val, y_val, "nothing"],
 		["2 E. Coli with poison level 1 died along with another E-Coli with poison level 2.", x_val, cyv(cyv(y_val, 2, -1), 1, -2), "replace"],
 		["8 E. Coli with poison level 1 died. <br> 5 E. Coli with poison level 2 died. <br> 3 E. Coli with poison level 3 died. <br> 2 E. Coli with poison level 4 died. <br> 1 E. Coli with poison level 5 died.", x_val, cyv(cyv(cyv(cyv(cyv(y_val, 5, -1), 4, -2), 3, -3), 2, -5), 1, -8), "replace"],
-		["The E. Coli reproduce.<br> An E. Coli with poison level 8 has a child that has a mutation of poison level 11.", x_val, cyv(reproduce(y_val), 11, 1), "replace"],
+		["The E. Coli reproduce.<br> An E. Coli with poison level 8 has a child that has a mutation of poison level 11.", x_val, cyv(cyv(reproduce(y_val), 11, 1), 8, -1), "replace"],
 		[
 			"Human takes more antibiotics. <br>14 E. Coli with poison level 1 die from this surplus amount of antibiotics.<br>14 E. Coli with poison level 2 also die for the same reason.<br>10 E. Coli with poison level 3 also die.<br>11 E. Coli with poison level 4 die.<br>5 E. Coli with poison level 5 die.", 
 			x_val, 
@@ -189,9 +189,9 @@ async function view_story(){
 			cyv(cyv(cyv(cyv(cyv(y_val, 8, -1), 7, -2), 6, -3), 5, 1), 4, -1),
 			"replace"
 		],
-		["The E. Coli reproduce.",
+		["The E. Coli reproduce, but there is a mutation and a child of a E. Coli with poison level 4 has poison level 3.",
 			x_val,
-			reproduce(y_val),
+			cyv(cyv(reproduce(y_val), 3, 1), 4, -1),
 			"replace"
 		]
 	]
