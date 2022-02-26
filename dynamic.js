@@ -188,6 +188,11 @@ async function view_story(){
 			x_val,
 			cyv(cyv(cyv(cyv(cyv(y_val, 8, -1), 7, -2), 6, -3), 5, 1), 4, -1),
 			"replace"
+		],
+		["The E. Coli reproduce.",
+			x_val,
+			reproduce(y_val),
+			"replace"
 		]
 	]
 	for (let i = 0; i < seq.length; i++){
