@@ -55,7 +55,7 @@ function arr_sum(arr){
 		return 0
 	}
 }
-const storyline = (text, x_data, y_data, type="add") => {
+const storyline = (text, x_data, y_data, type="add", i) => {
 	if (type === "add"){
 		x = x.concat(x_data)
 		y = y_val = y.concat(y_data)
@@ -101,7 +101,7 @@ const storyline = (text, x_data, y_data, type="add") => {
 		options: {
 			title: {
 				display: true,
-				text: `E. Coli population (${arr_sum(y)})`,
+				text: `E. Coli population (${arr_sum(y)}), Generation ${i}`,
 				fontSize: 28,
 			},
 			animation: {
@@ -194,21 +194,36 @@ async function view_story(){
 			cyv(cyv(reproduce(y_val), 3, 1), 4, -1),
 			"replace"
 		],
-		["An E. Coli with poison level 3 dies.<br>2 E. Coli with poison level 4 die.<br>3 E. Coli with poison level 5 die.<br>3 E. Coli with poison level 6 die.<br>An E. Coli with poison level 7 dies.<br>An E. Coli with poison level 11 dies.", 
+		["An E. Coli with poison level 3 dies.<br>An E. Coli with poison level 4 dies.<br>3 E. Coli with poison level 5 die.<br>3 E. Coli with poison level 6 die.<br>An E. Coli with poison level 7 dies.<br>An E. Coli with poison level 11 dies.", 
 		 	x_val,
-		 	cyv(cyv(cyv(cyv(cyv(cyv(y_val, 3, -1), 4, -2), 5, -3), 6, -3), 7, -1), 11, -1),
+		 	cyv(cyv(cyv(cyv(cyv(cyv(y_val, 3, -1), 4, -1), 5, -3), 6, -3), 7, -1), 11, -1),
 			"replace"
 		],
-		["2 E. Coli with poison level 4 die.<br>4 E. Coli with poison level 5 die.<br>An E. Coli with poison level 6 dies.<br>4 E. Coli with poison level 7 die.<br>2 E. Coli with poison level 8 die.",
+		["2 E. Coli with poison level 4 die.<br>4 E. Coli with poison level 5 die.<br>An E. Coli with poison level 6 dies.<br>4 E. Coli with poison level 7 die.<br>2 E. Coli with poison level 8 die.<br>An E Coli with poison level 11 dies.",
 			x_val,
-			cyv(cyv(cyv(cyv(cyv(y_val, 8, -1), 7, -4), 6, -1), 5, -4), 4, -2),
+			cyv(cyv(cyv(cyv(cyv(cyv(y_val, 11, -1), 8, -1), 7, -4), 6, -1), 5, -4), 4, -2),
+			"replace"
+		],
+		["The E. Coli reproduce.",
+			x_val,
+			reproduce(y_val),
+			"replace"
+		],
+		["2 E. Coli with poison level 4 die.<br>3 E. Coli with poison level 5 die.<br>4 E. Coli with poison level 6 die.<br>6 E. Coli with poison level 7 die.<br>4 E. Coli with poison level 8 die.<br>An E. Coli with poison level 11 dies.",
+			x_val,
+			cyv(cyv(cyv(cyv(cyv(cyv(y_val, 11, -1), 8, -4), 7, -6), 6, -4), 5, -3), 4, -2),
+			"replace"
+		],
+		["An E. Coli with poison level 4 dies.<br>3 E. Coli with poison level 5 die.<br>3 E. Coli with poison level 6 die.<br>6 E. Coli with poison level 7 die.<br>5 E. Coli with poison level 8 die.<br>An E. Coli with poison level 11 dies.<br><hr>The simulation has ended.",
+			x_val,
+			cyv(cyv(cyv(cyv(cyv(cyv(y_val, 11, -1), 8, -5), 7, -6), 6, -3), 5, -3), 4, -1),
 			"replace"
 		]
 	]
 	for (let i = 0; i < seq.length; i++){
 		event = seq[i]
 		//console.log(i, event)
-		storyline(event[0], event[1], event[2], event[3])
+		storyline(event[0], event[1], event[2], event[3], i + 1)
 		await new Promise((resolve, reject) => {
 			document.getElementById("next_event").onclick = function(){
 				resolve("Button clicked!")

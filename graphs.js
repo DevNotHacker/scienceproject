@@ -33,7 +33,7 @@ start_chart = new Chart(start, {
 	options: {
 		title: {
 			display: true,
-			text: 'Before',
+			text: 'Before (Generation 1)',
 			fontSize: 28,
 		},
 
@@ -86,7 +86,7 @@ ec = new Chart(end, {
 	options: {
 		title: {
 			display: true,
-			text: 'After',
+			text: 'After (Generation 21)',
 			fontSize: 28,
 		},
 		scales: {

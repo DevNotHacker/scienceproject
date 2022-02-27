@@ -73,6 +73,9 @@ header h2{
 }
 footer{
 	min-height: 40px;
+    padding-top: 20px;
+    text-align: center;
+	font-size: 18px;
 }
 .story_el:last-of-type {
     color: yellow;
