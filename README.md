@@ -1,2 +1,2 @@
-# scienceproject
-science project
+# Science Project
+This is the Github repo for my science project. Unfortunately, your feedback will most likely be ignored, as this assignment would most likely have already been graded before your pull request. Of course, you may use code from this repo, as long as you heed to the terms of the license, which can be found in the file named "LICENSE."
