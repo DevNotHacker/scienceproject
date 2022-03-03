@@ -47,6 +47,7 @@ header h2{
     background-position: left;
 	background-size: 100%;
 	background-image: url("assets/e_coli.jpeg");
+	border-radius: 10px;
 }
 #chatbox__content{
 	width: calc(100% - 40px);
@@ -116,7 +117,7 @@ footer{
 /* Modal Content/Box */
 .modal-content {
 	background-color: #fefefe;
-	margin: 20% auto; /* 15% from the top and centered */
+	margin: 10% auto; /* 15% from the top and centered */
 	padding: 20px;
 	border: 1px solid #888;
 	width: 80%; /* Could be more or less, depending on screen size */
@@ -159,7 +160,7 @@ footer{
 
 
 #popup .close_modal:hover{
-	background-position: 150% 0%;
+	background-position: 150% 0% !important;
 }
 .hide{
 	display: none;
@@ -168,4 +169,20 @@ footer{
 @keyframes fade{
 	from{display: block; opacity: 1;}
 	to{opacity: 0;}
+}
+#popup span{
+	display: none; 
+	font-size: 24px;
+	margin-top: 20px;
+}
+#next_event {
+	border: 2px solid black;
+	color: black;
+	background: none;
+	border-radius: 12px;
+	transition-duration: 0.4s;
+}
+#next_event:hover {
+	background-color: #555555;
+	color: white;
 }

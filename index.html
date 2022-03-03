@@ -21,17 +21,18 @@
 			<div id="chatbox">
 				<div id="chatbox__content">
 				</div>
-				<button id="next_event">Next Event Please!</button>
+				<button id="next_event">Next Generation</button>
 			</div>
 			<canvas id="story_graph" height="400"></canvas>	
 		</div>
 		<div id="popup" class="modal">
 		  <div class="modal-content">
 			<h1 class="bold">This website simulates e. coli population</h1>
-			  <p>Background Information that will be observered in the simulation: As you might know, a population is a collection of individuals of the same species in the same area. Populations can be described by the traits present and by the number of individuals who have the trait, also called distribution. This distribution changes over time, with individuals with more adaptive (traits that help an organism) become more common, while non-adaptive (the opposite of adaptive) traits become less and less common. These traits are classified as adaptive or non-adaptive based on the environment.</p><hr><p>These organisms are made of sets of instructions, commonly known as genes. These genes produce special proteins which change a special part of the organism. Organisms inheret these genes from their parent(s), therefore, in a population traits are passed down from generation to generation. Organisms with adaptive traits live longer, and therefore are more likely to be able to have offspring, while organisms with non-adaptive traits likely do not live long enough to have offspring.</p><hr><p>Sometimes, though, this pattern breaks. These breaks are called mutations. This means that there was a mistake in the genetic code, and the gene is changed, which can result to having different protein being produced, sometimes, but rarely, leading to new traits in the population. However, this new trait will only become more common over time if it is adaptive.</p><hr>
+			  <p>Background Information that will be observered in the simulation: As you might know, a population is a collection of individuals of the same species in the same area. Populations can be described by the traits present and by the number of individuals who have the trait, also called distribution. This distribution changes over time, with individuals with more adaptive (traits that help an organism) become more common, while non-adaptive (the opposite of adaptive) traits become less and less common. These traits are classified as adaptive or non-adaptive based on the environment.</p><hr><p>These organisms are made of sets of instructions, commonly known as genes. These genes produce special proteins which change a special part of the organism. Organisms inherit these genes from their parent(s), therefore, in a population traits are passed down from generation to generation. Organisms with adaptive traits live longer, and therefore are more likely to be able to have offspring, while organisms with non-adaptive traits likely do not live long enough to have offspring.</p><hr><p>Sometimes, though, this pattern breaks. These breaks are called mutations. This means that there was a mistake in the genetic code, and the gene is changed, which can result to having different protein being produced, sometimes, but rarely, leading to new traits in the population. However, this new trait will only become more common over time if it is adaptive.</p><hr><p>In the simulation, you will see two graphs on the top. Those are the before and after graphs of the population. The bottom event catalog marks events that occurred each generation. The right histogram is also an event catalog, but it visually shows what happened each generation.</p><hr>
 			  <h2>Ready?</h2>
 			  <button class="close_modal first" onclick="document.getElementById('popup').classList.add('hide')">Yes!</button> &emsp; 
-			  <button class="close_modal second" onclick="">No...</button>
+			  <button class="close_modal second" onclick="document.getElementById('popup_span').style.display = 'inline-block'">No...</button><br>
+			<span id="popup_span">Well, I can give you a couple seconds. Don't worry, the simulation will explain in greater detail!</span>
 			  
 		  </div>
 		</div>
